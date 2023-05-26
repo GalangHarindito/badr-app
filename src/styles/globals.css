@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  display: grid;
+  grid-auto-columns: 20rem 1fr;
+  grid-template-areas: "menuBar mainPage";
+}
+
+.menuBar {
+  grid-area: "menuBar";
+  grid-auto-rows: 1fr 5rem;
+}
+
+.mainPage {
+  grid-area: "mainPage";
+  display: grid;
+}
+
+.sidebarMenu {
+  display: grid;
+  grid-auto-rows: auto 3rem;
+}
+
+.buttonPrimary {
+  background-color: #1ba8df;
+}
+
+.buttonDark {
+  background-color: #052A49;
+}
+
+.buttonTransparent{
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.devider {
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  margin: 2rem 0;
+}

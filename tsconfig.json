@@ -20,9 +20,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@components/*": ["./src/components/*"],
+      "@components": ["./src/components/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@fragment/*": ["./src/fragment/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "baseUrl": "."
 }
