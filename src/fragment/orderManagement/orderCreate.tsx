@@ -24,10 +24,10 @@ const OrderCreatePage = () => {
         initialValues={{
           products: [
             {
-              product_id: 0,
-              quantity: 0,
-              productPrice: 0,
-              price: 0,
+              product_id: '',
+              quantity: '',
+              productPrice: '',
+              price: '',
             },
           ],
         }}
@@ -39,16 +39,16 @@ const OrderCreatePage = () => {
         }}
       >
         {({ values, handleSubmit, isSubmitting, setFieldValue, errors }) => {
-          const errorFormat = (i: number) => {
-            const quantity = getIn(values, `products[${i}].quantity`);
-          };
+           
+         
 
           return (
             <Form onSubmit={handleSubmit}>
               <FieldArray name='product'>
                 {(arrayHelpers) => (
                   <div>
-                    {values.product.length > 0 &&
+            
+                    {values.products && values.products.length > 0 &&
                       values.products.map((p: any, index: any) => {
                         return (
                           <div className='mb-2' key={index}>

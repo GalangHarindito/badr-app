@@ -53,7 +53,7 @@ const OrderListDetail = ({ dataOrder }: OrderListDetailProps | any) => {
   return (
     <>
       {isLoading ? (
-        <p>Lagi loading...</p>
+        <p className='text-xl flex items-center justify-center font-bold'>Lagi loading...</p>
       ) : (
         <>
           {dataOrder && (
