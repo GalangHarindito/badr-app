@@ -4,7 +4,7 @@ import { orderList, deleteOrderProduct } from "../hooks";
 import { useState } from "react";
 
 const Home: NextPage = () => {
-  const [page, setPage] = useState<number>(1);
+  const [page] = useState<number>(1);
   const { data, isLoading } = orderList(page);
 
   const { mutate, isLoading: isDeleting } = deleteOrderProduct();

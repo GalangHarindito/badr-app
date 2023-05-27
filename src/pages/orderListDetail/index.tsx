@@ -23,6 +23,7 @@ const OrderListdetail: NextPage = () => {
     );
     return res;
   };
+  
 
   useEffect(() => {
     if (data) {
