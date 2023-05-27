@@ -91,10 +91,11 @@ const OrderManagement = ({ data, onDelete }: OrderManagementProps) => {
         Cell: ({ cell }) => (
           <div>
             {buttonAction.map((item) => {
+              console.log(cell.row.original)
               return (
                 <ButtonIcon
                   icon={item.icon}
-                  onClick={() => handleClickAction(cell.row.index, item.button)}
+                  onClick={() => handleClickAction(cell.row.original.id, item.button)}
                   type='button'
                 />
               );
