@@ -1,12 +1,15 @@
 interface InputProps {
-  type: "text" | "password";
+  type: "text" | "password" | 'number';
   placeHolder: string;
   label?: string;
   required?: boolean;
   disabled?: boolean;
+  onChanges?: any;
+  name?: any;
+  value?: any;
 }
 
-const Input = ({ label, type, placeHolder, required, disabled }: InputProps) => {
+const Input = ({ name, onChanges,label, type, placeHolder, required, disabled, value }: InputProps) => {
   return (
     <div>
       <label className='text-thin'>
@@ -17,8 +20,11 @@ const Input = ({ label, type, placeHolder, required, disabled }: InputProps) => 
         placeholder={placeHolder}
         className={`p-2 border-solid border-2 border-input-border rounded-md w-full ${disabled? 'bg-grayDisabled' : ''}`}
         type={type}
-        onChange={(e) => e.target.value}
+        onChange={(e) => onChanges(e)}
         disabled={disabled}
+        name={name}
+        value={value}
+
       />
     </div>
   );

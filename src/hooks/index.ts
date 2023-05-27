@@ -1,5 +1,5 @@
 import { useQuery, useMutation } from '@tanstack/react-query';
-import { getOrderList, getOrderListDetail, getProduct, deleteOrder } from '../pages/api/orderManagement';
+import { getOrderList, getOrderListDetail, getProduct, deleteOrder, createOrder } from '../pages/api/orderManagement';
 
 export const orderList = (page:number) => {
     return useQuery(['getOrderList', page], () => getOrderList(page));
@@ -15,4 +15,8 @@ export const orderProduct = () => {
 
 export const deleteOrderProduct = () => {
     return useMutation((id:string | number) => deleteOrder(id));
+}
+
+export const createUserOrder = () => {
+    return useMutation((data:object) => createOrder(data));
 }

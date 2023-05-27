@@ -28,6 +28,11 @@ export const getProduct = async () => {
 };
 
 export const deleteOrder = async (id: string | number) => {
-    const response = await fetchApi.delete(`order/${id}`);
-    return response;
-  };
+  const response = await fetchApi.delete(`order/${id}`);
+  return response;
+};
+
+export const createOrder = async (data: object) => {
+  const response = await fetchApi.post(`order`, data);
+  return response;
+};

@@ -3,9 +3,10 @@ interface ButtonProps {
   buttonStyle: string;
   onClick?: any;
   type?: "button" | "submit" | "reset" | undefined;
+  disabled?: boolean
 }
 
-const Button = ({ label, onClick, buttonStyle, type, ...props }: ButtonProps) => {
+const Button = ({ label, onClick, buttonStyle, type, disabled, ...props }: ButtonProps) => {
 
   return (
     <button
@@ -13,6 +14,7 @@ const Button = ({ label, onClick, buttonStyle, type, ...props }: ButtonProps) =>
       type={type}
       onClick={onClick}
       {...props}
+      disabled = {disabled}
     >
       {label}
     </button>
